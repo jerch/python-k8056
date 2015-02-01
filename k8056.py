@@ -1,4 +1,4 @@
-#    Copyright (c) 2015 by jerch (brejoe@web.de)
+#    Copyright (c) 2007, 2015 by jerch (brejoe@web.de)
 #
 #    This program is free software; you can redistribute it and#or modify
 #    it under the terms of the GNU General Public License as published by
@@ -53,8 +53,7 @@ class K8056(object):
             sleep(self.wait)
         
     def set(self, relay, address=1):
-        '''
-        Set `relay` (9 for all) of card at `address` (default 1).'''
+        '''Set `relay` (9 for all) of card at `address` (default 1).'''
         if not 0 < relay < 10:
             raise Exception('invalid relay number')
         self._process(83, relay+48, address&255)

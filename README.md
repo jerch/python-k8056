@@ -1,5 +1,11 @@
 Python module for the velleman k8056 relay card.
 
+
+### Dependencies
+
+* pySerial
+
+
 ### Example
 ```python
 from k8056 import K8056
